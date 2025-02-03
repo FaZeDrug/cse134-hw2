@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natasha Tran</title>
+    <!-- defines relationship btwn current doc and an external resource (rel is relationship, href is the url of the linked doc) -->
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <style>
-
+    #about-me-images div {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    img {
+        border: 1px solid black; /* this is border-color and border-style combined */
+    }
 </style>
-<body> 
+<body>
+    
+    <hello-world></hello-world>
+    <script>
+        // Define the custom element
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super(); // Call the parent constructor
+                console.log("Hello World!"); // Log to the console
+            }
+        }
+
+        // Register the custom element
+        customElements.define('hello-world', HelloWorld);
+    </script>
     <header>
         <div>
             <span>NT</span> <!-- span here b/c it will be inline to the navbar once we do CSS-->
@@ -52,7 +76,23 @@
             <a href="natashamarietran@gmail.com">natashamarietran@gmail.com</a>
         </address>
 
-        
+        <section id="about-me-images">
+            <!-- <div style="display: flex; justify-content: center; gap: 20px;"> -->
+            <div>
+                <figure>
+                    <img src="robloxgrown.jpg" alt="Natasha playing Roblox, looking back at camera" width="200" height="200">
+                    <caption>Computer lover</caption>
+                </figure>
+                <figure>
+                    <img src="natgym.jpg" alt="Mirror selfie of Natasha flexing arm at gym" width="200" height="200">
+                    <caption>Gym lover</caption>
+                </figure>
+                <figure>
+                    <img src="glasses.jpg" alt="Natasha posing for selfie, wearing glasses" width="200" height="200">
+                    <caption>Fake glasses wearer</caption>
+                </figure>
+            </div>
+        </section>
     </main>
 
     
