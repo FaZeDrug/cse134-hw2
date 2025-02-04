@@ -65,13 +65,16 @@
 
     <main>
         
+        <label for="search">Search My stuff:</label><br />
         <search>
-            <form action="search.php">
-              <label for="query">Find something</label>
-              <input id="query" name="q" type="search">
-              <button type="submit">Go!</button>
-            </form>
-          </search>
+            <input type="text" id="search" name="search" list="web-search" />
+            <datalist id="webby-search">
+            <option value="stuff"></option>
+            <option value="1"></option>
+            <option value="yae"></option>
+            <option value="eea"></option>
+            </datalist>
+        </search>
 
         <section id="customElems">
             <h3> Custom Elements Below</h3>
